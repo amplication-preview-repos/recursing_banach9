@@ -1,0 +1,48 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model LibraryDContent {
+  createdAt DateTime @default(now())
+  genre     String?
+  id        String   @id @default(cuid())
+  language  String?
+  movie     String?
+  series    String?
+  updatedAt DateTime @updatedAt
+}
+
+model LibraryAContent {
+  createdAt DateTime @default(now())
+  genre     String?
+  id        String   @id @default(cuid())
+  language  String?
+  movie     String?
+  series    String?
+  updatedAt DateTime @updatedAt
+}
+
+model LibraryCContent {
+  createdAt DateTime @default(now())
+  genre     String?
+  id        String   @id @default(cuid())
+  language  String?
+  movie     String?
+  series    String?
+  updatedAt DateTime @updatedAt
+}
+
+model LibraryBContent {
+  createdAt DateTime @default(now())
+  genre     String?
+  id        String   @id @default(cuid())
+  language  String?
+  movie     String?
+  series    String?
+  updatedAt DateTime @updatedAt
+}
